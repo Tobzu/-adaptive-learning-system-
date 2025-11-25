@@ -1,0 +1,119 @@
+{
+  "project": "adaptive_learning_system",
+  "version": "1.0",
+  "sessions": [
+    {
+      "session_id": "S001",
+      "date": "2025-11-25",
+      "start_time": "10:00",
+      "end_time": "11:15",
+      "duration_minutes": 75,
+      "lesson_type": "L",
+      "lesson_id": "L01",
+      "goal_id": "G01",
+      "session_goals": {
+        "main_goal": "Learn basic loop structure",
+        "learning_goal": "Understand how while loops work",
+        "time_planned_minutes": 90
+      },
+      "concepts_learned": [
+        {
+          "concept": "while loop",
+          "status": "understood",
+          "notes": "Loop continues as long as condition is true"
+        },
+        {
+          "concept": "break statement",
+          "status": "understood",
+          "notes": "Exits the current loop immediately"
+        }
+      ],
+      "errors": [
+        {
+          "error_type": "syntax",
+          "line": 8,
+          "description": "Missing colon after while statement",
+          "self_corrected": true,
+          "attempts": 1
+        },
+        {
+          "error_type": "logic",
+          "line": 15,
+          "description": "Condition never becomes false - infinite loop",
+          "self_corrected": true,
+          "attempts": 2
+        }
+      ],
+      "reflection": {
+        "difficulty": "Understanding when the loop condition is checked was initially confusing",
+        "success": "I successfully corrected both errors without hints",
+        "strategy": "Reading the code line by line and tracing variable values helped",
+        "transfer": "I can apply this to any situation where I need repetition",
+        "next_focus": "Practice combining loops with conditions"
+      },
+      "goal_achieved": true,
+      "error_count": 2,
+      "error_free_attempts": 1,
+      "celebration_level": 1,
+      "notes": "Good first session, clear progress on loop understanding"
+    },
+    {
+      "session_id": "S002",
+      "date": "2025-11-26",
+      "start_time": "14:00",
+      "end_time": "15:20",
+      "duration_minutes": 80,
+      "lesson_type": "L",
+      "lesson_id": "L02",
+      "goal_id": "G01",
+      "session_goals": {
+        "main_goal": "Add input validation to programs",
+        "learning_goal": "Understand try/except for error handling",
+        "time_planned_minutes": 90
+      },
+      "concepts_learned": [
+        {
+          "concept": "try/except block",
+          "status": "understood",
+          "notes": "Catches errors without crashing the program"
+        },
+        {
+          "concept": "ValueError",
+          "status": "understood",
+          "notes": "Occurs when converting invalid string to int"
+        }
+      ],
+      "errors": [
+        {
+          "error_type": "structure",
+          "line": 12,
+          "description": "except block not aligned with try block",
+          "self_corrected": true,
+          "attempts": 1
+        }
+      ],
+      "reflection": {
+        "difficulty": "Remembering the exact indentation for try/except blocks",
+        "success": "Error handling now makes sense - I understand why it's needed",
+        "strategy": "Comparing with the example structure helped",
+        "transfer": "I can use this anywhere users input data",
+        "next_focus": "Combine loops and error handling in one program"
+      },
+      "goal_achieved": true,
+      "error_count": 1,
+      "error_free_attempts": 2,
+      "celebration_level": 2,
+      "notes": "Excellent progress - achieved 2 error-free programs in a row"
+    }
+  ],
+  "summary": {
+    "total_sessions": 2,
+    "total_duration_minutes": 155,
+    "average_duration_minutes": 77.5,
+    "total_concepts_learned": 4,
+    "total_errors": 3,
+    "average_errors_per_session": 1.5,
+    "self_correction_rate": 1.0,
+    "goal_achievement_rate": 1.0
+  }
+}

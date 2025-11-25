@@ -1,0 +1,178 @@
+{
+  "project": "adaptive_learning_system",
+  "version": "1.0",
+  "last_updated": "2025-11-25",
+  "overall_progress": {
+    "goals_completed": 1,
+    "goals_in_progress": 1,
+    "goals_not_started": 2,
+    "total_goals": 4,
+    "completion_percentage": 25
+  },
+  "goals": [
+    {
+      "id": "G01",
+      "title": "Basic Program Structure",
+      "status": "completed",
+      "progress_percent": 100,
+      "commands": {
+        "while": true,
+        "if": true,
+        "input": true,
+        "print": true,
+        "try": true,
+        "except": true
+      },
+      "lessons_completed": ["L01", "L02"],
+      "test_passed": true,
+      "date_completed": "2025-11-26"
+    },
+    {
+      "id": "G02",
+      "title": "Functions and Structure",
+      "status": "in_progress",
+      "progress_percent": 50,
+      "commands": {
+        "def": true,
+        "return": true,
+        "list": true,
+        "append": false,
+        "len": false
+      },
+      "lessons_completed": ["L03"],
+      "test_passed": false,
+      "date_started": "2025-11-27"
+    },
+    {
+      "id": "G03",
+      "title": "Advanced Control Flow",
+      "status": "not_started",
+      "progress_percent": 0,
+      "commands": {
+        "for": false,
+        "range": false,
+        "break": false,
+        "continue": false
+      },
+      "lessons_completed": [],
+      "test_passed": false
+    },
+    {
+      "id": "G04",
+      "title": "Data Processing",
+      "status": "not_started",
+      "progress_percent": 0,
+      "commands": {
+        "split": false,
+        "join": false,
+        "min": false,
+        "max": false,
+        "sum": false
+      },
+      "lessons_completed": [],
+      "test_passed": false
+    }
+  ],
+  "command_mastery": {
+    "total_commands": 20,
+    "mastered_commands": 8,
+    "mastery_percentage": 40,
+    "commands_by_status": {
+      "true": ["while", "if", "input", "print", "try", "except", "def", "return"],
+      "false": ["list", "append", "len", "for", "range", "break", "continue", "split", "join", "min", "max", "sum"]
+    }
+  },
+  "error_analytics": {
+    "total_errors": 12,
+    "errors_by_type": {
+      "syntax": 5,
+      "structure": 3,
+      "logic": 3,
+      "input": 1
+    },
+    "error_trend": {
+      "session_1": 4,
+      "session_2": 3,
+      "session_3": 2,
+      "session_4": 2,
+      "session_5": 1
+    },
+    "improvement_rate": "-75%",
+    "current_focus_areas": ["structure errors", "logic errors"]
+  },
+  "engagement_metrics": {
+    "streak_days": 5,
+    "longest_streak": 7,
+    "total_sessions": 5,
+    "total_learning_time_minutes": 380,
+    "average_session_length_minutes": 76,
+    "sessions_per_week": 3.5,
+    "consistency_score": 0.85
+  },
+  "session_history": [
+    {
+      "date": "2025-11-25",
+      "lesson": "L01",
+      "duration_minutes": 75,
+      "errors": 2,
+      "status": "completed"
+    },
+    {
+      "date": "2025-11-26",
+      "lesson": "L02",
+      "duration_minutes": 80,
+      "errors": 1,
+      "status": "completed"
+    },
+    {
+      "date": "2025-11-27",
+      "lesson": "T01",
+      "duration_minutes": 65,
+      "errors": 0,
+      "status": "passed"
+    },
+    {
+      "date": "2025-11-28",
+      "lesson": "L03",
+      "duration_minutes": 70,
+      "errors": 2,
+      "status": "completed"
+    },
+    {
+      "date": "2025-11-29",
+      "lesson": "W01",
+      "duration_minutes": 90,
+      "errors": 1,
+      "status": "completed"
+    }
+  ],
+  "next_steps": {
+    "recommended_lesson": "L04",
+    "focus_areas": [
+      "Practice combining functions and lists",
+      "Reduce structure errors through review",
+      "Continue building streak (5 days current)"
+    ],
+    "estimated_time_to_next_goal": "2-3 sessions"
+  },
+  "achievements": [
+    {
+      "type": "goal_completed",
+      "goal_id": "G01",
+      "date": "2025-11-26",
+      "description": "Completed Basic Program Structure goal"
+    },
+    {
+      "type": "test_passed",
+      "test_id": "T01",
+      "date": "2025-11-27",
+      "description": "Passed first test without errors"
+    },
+    {
+      "type": "streak_milestone",
+      "streak_days": 5,
+      "date": "2025-11-29",
+      "description": "Maintained 5-day learning streak"
+    }
+  ]
+}

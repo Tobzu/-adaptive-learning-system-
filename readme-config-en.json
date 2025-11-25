@@ -1,0 +1,322 @@
+{
+  "project": {
+    "name": "adaptive_learning_system",
+    "version": "1.0",
+    "description": "Adaptive learning system with flexible goals and lesson types",
+    "last_updated": "2025-11-25",
+    "based_on": "Error-driven study mode with maximum 2 new concepts per lesson"
+  },
+  "learning_structure": {
+    "type": "goal_based",
+    "goal_prefix": "G##",
+    "lesson_types": {
+      "learning": "L##",
+      "review": "W##",
+      "test": "T##"
+    },
+    "flexible_path": true,
+    "learner_chooses_next": true,
+    "description": "Learners choose their own goals and lesson type"
+  },
+  "study_mode": {
+    "enabled": true,
+    "version": 11,
+    "description": "Error-driven learning path without immediate solutions",
+    "core_rules": [
+      "Step-by-step learning based on self-chosen goals",
+      "Error-driven learning path",
+      "Use only concepts that have already been introduced",
+      "Maximum 2 new commands per lesson",
+      "Introduce new concepts in a controlled and minimal way",
+      "Feedback based on error_plan (Syntax/Structure/Logic/Input)"
+    ],
+    "feedback_rules": [
+      "When correction is requested: Output complete code with line numbers",
+      "Then error list: Line number + error type + brief description",
+      "During correction: NO complete solutions or model answers",
+      "Only individual hints about reported error locations and types",
+      "Only hints and targeted prompts during error correction",
+      "Do not provide immediate solution",
+      "Complete solution only after multiple failed attempts or on explicit request",
+      "Full model solution or explanation only after error-free submission or on request"
+    ],
+    "error_response_format": {
+      "step_1": "Output code completely with line numbering",
+      "step_2": "Error list: Only line + error type (no explanation)",
+      "example": "Line 12 – Logic error\\nLine 24 – Structure error",
+      "step_3": "No solution suggestions, no hints until correction",
+      "step_4": "After error-free submission: Feedback and next steps"
+    },
+    "command_limit": {
+      "max_new_per_lesson": 2,
+      "auto_split_if_exceeded": true,
+      "sub_lesson_format": "L##.1, L##.2, etc.",
+      "description": "Automatically split into sub-units if more than 2 new commands are needed"
+    },
+    "new_command_introduction": {
+      "timing": "Always at the beginning of the lesson",
+      "content": [
+        "State the purpose of the command",
+        "Examples without solving the current problem",
+        "Hint where they will be used later in the program"
+      ]
+    },
+    "correction_workflow": [
+      "1. User submits code",
+      "2. AI numbers it completely",
+      "3. AI lists all error lines (only numbers + error type)",
+      "4. User rewrites code up to the highest error line",
+      "5. Repeat process until no errors exist",
+      "6. Then: AI provides explanation + improvement suggestions"
+    ]
+  },
+  "error_classification": {
+    "source": "error_plan",
+    "types": {
+      "syntax": {
+        "description": "Typos, wrong operator, missing colon, missing brackets/quotation marks",
+        "examples": [
+          "while x = 5: instead of x == 5",
+          "len list instead of len(list)",
+          "if x > 5 instead of if x > 5:"
+        ]
+      },
+      "structure": {
+        "description": "Wrong block order, break in wrong level, variable used before assignment, function definition after call",
+        "examples": [
+          "break outside loop",
+          "append() before list is defined",
+          "function call before def"
+        ]
+      },
+      "logic": {
+        "description": "Conditions syntactically correct but semantically wrong, infinite loops, wrong calculations, off-by-one errors",
+        "examples": [
+          "in with list instead of string",
+          "min() on empty list",
+          "comparing str with int"
+        ]
+      },
+      "input": {
+        "description": "input/try/except used incorrectly, missing error handling, unhandled type conversion errors",
+        "examples": [
+          "input not converted to int",
+          "ValueError not caught"
+        ]
+      }
+    },
+    "error_levels": {
+      "0": "Error no longer occurs (archived)",
+      "1": "Error was relevant, currently not active (observation)",
+      "2": "Error currently occurs (active, needs practice)"
+    },
+    "repeat_rule": "After 3+ repetitions of the same error → automatic review lesson (W##)"
+  },
+  "lesson_structure": {
+    "lesson_start_choices": {
+      "count": 3,
+      "options": [
+        "Small extension of an existing program",
+        "New simple program using known commands",
+        "Clearly defined challenge (sub-step of larger project)"
+      ],
+      "rule": "For each option, note the 2 new commands/concepts"
+    },
+    "lesson_types_detail": {
+      "L##": {
+        "name": "Learning Lessons",
+        "new_commands_max": 2,
+        "structure": "Explain concept → Mini-example → Practice task → Error correction",
+        "completion_action": "Set commands to true in all relevant G##"
+      },
+      "W##": {
+        "name": "Review Lessons",
+        "new_commands_max": 0,
+        "purpose": "Combine and deepen previously learned concepts",
+        "flexibility": "Can be inserted at any time"
+      },
+      "T##": {
+        "name": "Test Lessons",
+        "purpose": "Test all commands of a goal (G##)",
+        "success_action": "Set goal to status: completed",
+        "failure_action": "Schedule review (W##), then retest",
+        "prerequisite": "Only when all commands of a goal are true"
+      }
+    }
+  },
+  "program_structure_rules": {
+    "order": [
+      "1. All def definitions at the top",
+      "2. Initial variables below",
+      "3. Exactly one main loop in the entire program",
+      "4. Main part order: Display → Input → Input validation → Logic"
+    ],
+    "function_rules": [
+      "Clear separation of function definitions and main loop",
+      "Logic not in pure display functions",
+      "Use return when functions deliver values outward"
+    ],
+    "applies_to": "All programs and sub-exercises"
+  },
+  "motivation_system": {
+    "enabled": true,
+    "session_structure": {
+      "1_session_start": {
+        "duration_minutes": 2,
+        "activity": "Define personal learning goals",
+        "questions": [
+          "Main goal for today: What do I want to achieve today?",
+          "Learning goal (concept): What do I want to understand?",
+          "Time frame: How much time do I have today? (max 90 min)"
+        ]
+      },
+      "2_learning_phase": {
+        "duration_minutes": "60-80",
+        "activity": "Study mode as usual (error-driven learning)"
+      },
+      "3_success_moments": {
+        "timing": "inline",
+        "activity": "Celebration at milestones"
+      },
+      "4_session_end": {
+        "duration_minutes": "5-10",
+        "activity": "Metacognitive reflection"
+      },
+      "5_documentation": {
+        "activity": "Learning journal entry + Progress update"
+      }
+    },
+    "celebration_levels": {
+      "level_1": {
+        "name": "Small but important",
+        "triggers": [
+          "Error-free code on first attempt",
+          "Own error correction without hint",
+          "Faster solution than last time"
+        ],
+        "format": "✓ Concrete recognition with justification"
+      },
+      "level_2": {
+        "name": "Milestone",
+        "triggers": [
+          "3 tasks in a row without errors",
+          "Repeated error (level 2) solved correctly for the first time",
+          "Complete program without external help"
+        ],
+        "format": "🎉 Milestone + progress comparison + motivation"
+      },
+      "level_3": {
+        "name": "Module completion",
+        "triggers": [
+          "Complete module successfully completed",
+          "All tasks mastered without critical errors"
+        ],
+        "format": "🏆 Module mastered + overall progress + streak + outlook"
+      }
+    },
+    "celebration_rules": [
+      "Be specific (What exactly was achieved?)",
+      "Be justified (Why is this a success?)",
+      "Show progress (comparison with before)",
+      "Be motivating (look forward)",
+      "NO generic praise"
+    ],
+    "reflection_questions": [
+      "Difficulty: What was particularly difficult for you today? Why?",
+      "Success: What did you do well today?",
+      "Strategy: Which strategy helped you solve it?",
+      "Transfer: Where else could you apply what you learned today?",
+      "Next session: What should we focus on next time?"
+    ]
+  },
+  "time_management": {
+    "max_session_duration_minutes": 90,
+    "start_question": "What time is it now?",
+    "break_rule": "After 45 min → suggest 5-min break",
+    "goal": "Avoid overload and clearly structure learning blocks"
+  },
+  "documentation": {
+    "files": {
+      "README.md": "All rules, principles and templates for humans",
+      "readme-config.json": "Machine-readable configuration of all rules",
+      "teaching-plan.json": "Goals (G##), Lessons (L##, W##, T##), Command Tracker",
+      "programs.txt": "Chronological code versions numbered by lesson/test",
+      "learning-log.json": "Each session with reflection and documentation (machine-readable)",
+      "progress.json": "Goal status, error tracking, engagement metrics (machine-readable)",
+      "cheat-sheet.md": "Learned commands (only known concepts)",
+      "error-plan.md": "Definition of error levels and error types",
+      "error-history.json": "Error history and trigger logic (machine-readable)"
+    },
+    "learning_log_structure": {
+      "format": "JSON",
+      "required_fields": [
+        "session_id",
+        "date",
+        "type (L/W/T)",
+        "goal_id",
+        "duration_minutes",
+        "status",
+        "concepts_learned",
+        "errors",
+        "reflection",
+        "goal_achieved"
+      ]
+    },
+    "progress_structure": {
+      "format": "JSON",
+      "required_fields": [
+        "goals (with status and progress_percent)",
+        "command_mastery",
+        "error_analytics",
+        "streak_days",
+        "session_history"
+      ]
+    },
+    "code_storage": {
+      "file": "programs.txt",
+      "format": "TITLE [ID] – [Name]\\n\\n[Code]\\n\\n---\\n",
+      "rule": "Each version as new section, do not delete old versions"
+    }
+  },
+  "cheat_sheet_management": {
+    "core_rule": "Only concepts that have already been introduced may be used",
+    "update_timing": "At the end of each lesson",
+    "update_process": [
+      "Add new commands",
+      "Create change note",
+      "Consult before each new lesson"
+    ],
+    "validation": "Before each learning unit check: Which commands are needed? Which are already known?"
+  },
+  "goal_structure": {
+    "format": {
+      "id": "G##",
+      "title": "Project name",
+      "description": "Brief description",
+      "commands": "Object with command: true/false",
+      "status": "not_started | in_progress | completed",
+      "progress_percent": "0-100"
+    },
+    "test_prerequisite": "Test (T##) only when all commands are true"
+  },
+  "ai_compatibility": {
+    "target": "Universal AI compatibility",
+    "checklist_before_response": [
+      "Is my answer in study mode?",
+      "Do I only mention errors, not solutions?",
+      "Do I use line numbers + error type?",
+      "Do I stick to the command limit?",
+      "Do I document correctly?"
+    ],
+    "instruction": "Read readme-config.json and README.md completely before each session"
+  },
+  "post_lesson_checklist": [
+    "Ask reflection questions",
+    "Update learning-log.json",
+    "Update progress.json",
+    "Set commands to true in teaching-plan.json",
+    "On success: Output celebration",
+    "Document errors in error-history.json",
+    "With 3+ repetitions: Schedule W##"
+  ]
+}

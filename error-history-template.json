@@ -1,0 +1,20 @@
+[
+  {
+    "timestamp": "2025-11-25T10:00:00",
+    "error_type": "structure",
+    "line": 15,
+    "level": 1,
+    "description": "Function definition after call",
+    "lesson": "L01",
+    "resolved": false
+  },
+  {
+    "timestamp": "2025-11-25T10:30:00",
+    "error_type": "syntax",
+    "line": 8,
+    "level": 0,
+    "description": "Missing colon after if statement",
+    "lesson": "L02",
+    "resolved": true
+  }
+]
