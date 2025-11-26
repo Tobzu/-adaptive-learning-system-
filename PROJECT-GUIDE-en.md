@@ -4,6 +4,9 @@
 
 This guide explains how to use, adapt, and improve the Adaptive Learning System for any subject. It documents the development process, best practices, and source management that made this system work.
 
+First, you need to upload the files:
+Readme.md, cheat-sheet, error-history, error pla, learning log, progress, readme-config, and teaching-plan to the project/space.
+
 ### IMPORTANT:
 You do not need to have any programming knowledge. If you notice any areas for improvement during a lesson, type “Todo: problem xy.” At the end, say that you want to incorporate all improvements. The LMM will provide the modified/new block that you can insert/change => upload new file.
 
