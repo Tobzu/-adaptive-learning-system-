@@ -4,16 +4,46 @@
   "sessions": [
     {
       "session_id": "S001",
-      "date": "2025-11-25",
-      "start_time": "10:00",
-      "end_time": "11:15",
-      "duration_minutes": 75,
+      "date": "2025-11-26",
+      "start_time": "15:00",
+      "end_time": "15:45",
+      "duration_minutes": 45,
       "lesson_type": "L",
       "lesson_id": "L01",
       "goal_id": "G01",
       "session_goals": {
-        "main_goal": "Learn basic loop structure",
-        "learning_goal": "Understand how while loops work",
-        "time_planned_minutes": 90
+        "main_goal": "Learn to create and use variables",
+        "learning_goal": "Understand different data types (int, str, float)",
+        "time_planned_minutes": 45
       },
-  
+      "concepts_learned": [
+        {
+          "concept": "variables",
+          "status": "understood",
+          "notes": "Can store strings, integers, and floats"
+        }
+      ],
+      "errors": [],
+      "reflection": {
+        "difficulty": "What part was hardest for you?",
+        "success": "What worked well?",
+        "strategy": "What helped you learn this?",
+        "transfer": "Where else could you use variables?",
+        "next_focus": "What should we work on next?"
+      },
+      "goal_achieved": false,
+      "error_count": 0,
+      "error_free_attempts": 1,
+      "celebration_level": 0,
+      "notes": "First session starting point"
+    }
+  ],
+  "summary": {
+    "total_sessions": 1,
+    "total_duration_minutes": 45,
+    "total_concepts_learned": 1,
+    "total_errors": 0,
+    "self_correction_rate": 0,
+    "goal_achievement_rate": 0
+  }
+}
