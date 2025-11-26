@@ -1,92 +1,34 @@
 {
   "project": "adaptive_learning_system",
-  "version": "1.0-2025-11",
-  "description": "Flexible curriculum with goals (G##) and adaptive lesson types (L##, W##, T##)",
-  "study_mode": {
-    "required": true,
-    "version": 10,
-    "rules": [
-      "Step-by-step approach",
-      "No ready-made solutions",
-      "Error correction with line indication",
-      "Report errors with error type (Syntax/Structure/Logic/Input)",
-      "User builds structures themselves",
-      "Path reacts to repeated errors",
-      "Focus rule: first get basics correct, then extensions",
-      "Max. 2 new commands per lesson"
-    ]
-  },
-  "code_storage": {
-    "file": "programs.txt",
-    "section_prefix": "TITLE ",
-    "rules": [
-      "Each version as new section",
-      "Do not delete old versions",
-      "Format: TITLE L## - [Title]"
-    ]
-  },
+  "version": "1.0",
+  "description": "Adaptive lesson plan for Python basics",
   "goals": [
     {
       "id": "G01",
-      "title": "Example Goal - Basic Program",
-      "description": "Simple interactive program with input, loops and error handling",
+      "title": "Basic Program Structure",
+      "description": "Write a simple interactive Python program with input, variables, and a main loop.",
+      "status": "completed",
+      "progress_percent": 100,
       "commands": {
-        "while": false,
-        "if": false,
-        "input": false,
-        "print": false
+        "while": true,
+        "if": true,
+        "input": true,
+        "print": true,
+        "try": true,
+        "except": true
       },
-      "status": "not_started",
-      "progress_percent": 0,
-      "related_lessons": ["L01", "L02"],
-      "test": "T01"
+      "lessons_completed": ["L01", "L02"],
+      "test_passed": true,
+      "date_completed": "2025-11-26"
     }
   ],
   "lessons": [
     {
       "id": "L01",
-      "type": "lesson",
-      "title": "First Lesson - Basic Concept",
-      "description": "Introduction to basic programming concept",
-      "new_commands": ["command1", "command2"],
-      "prerequisites": [],
-      "output": "program_v1",
-      "topics": ["basics", "structure"],
+      "title": "Using While Loops and If Statements",
       "goal_id": "G01",
-      "status": "not_started",
-      "date_completed": null
+      "status": "completed",
+      "new_commands": ["while", "if"],
+      "output": "program_v1.py"
     },
     {
-      "id": "W01",
-      "type": "review",
-      "title": "Review - Combining Concepts",
-      "description": "Combine and practice previously learned concepts",
-      "commands_reviewed": ["command1", "command2"],
-      "status": "not_started"
-    },
-    {
-      "id": "T01",
-      "type": "test",
-      "title": "Test - Goal Assessment",
-      "description": "Test all commands of a goal",
-      "goal_id": "G01",
-      "required_commands": ["while", "if", "input", "print"],
-      "topics": ["structure", "logic"],
-      "status": "not_started"
-    }
-  ],
-  "commands": {
-    "while": {
-      "learned_in": "L01",
-      "status": false,
-      "last_used": null,
-      "related_goals": ["G01"]
-    },
-    "if": {
-      "learned_in": "L01",
-      "status": false,
-      "last_used": null,
-      "related_goals": ["G01"]
-    }
-  }
-}
