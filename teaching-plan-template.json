@@ -4,17 +4,14 @@
   "description": "Adaptive lesson plan for Python basics",
   "goals": [
     {
-      "id": "G01",
+      "id": "L01",
       "title": "Basic Program Structure",
-      "description": "Write a simple interactive Python program with input, variables, and a main loop.",
+      "description": "Write a simple interactive Python program with input, variables, and write in.",
       "status": "completed",
       "progress_percent": 100,
       "commands": {
-        "while": true,
-        "if": true,
         "input": true,
         "print": true,
-        "try": true,
         "except": true
       },
       "lessons_completed": ["L01", "L02"],
@@ -22,13 +19,4 @@
       "date_completed": "2025-11-26"
     }
   ],
-  "lessons": [
-    {
-      "id": "L01",
-      "title": "Using While Loops and If Statements",
-      "goal_id": "G01",
-      "status": "completed",
-      "new_commands": ["while", "if"],
-      "output": "program_v1.py"
-    },
-    {
+  
