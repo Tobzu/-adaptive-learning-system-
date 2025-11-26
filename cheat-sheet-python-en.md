@@ -1,4 +1,4 @@
-# 1. Initial variables
+## 1. Initial variables
 ```
 variable = 0
 list_name = []
