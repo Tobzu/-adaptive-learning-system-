@@ -1,6 +1,6 @@
 ### 1. Initial variables
 ```
-variable = 0
-list_name = []
-running = True
+variable = 0 # numbers
+text = "" # text
+running = True # Boolean rule
 ```
