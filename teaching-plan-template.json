@@ -1,22 +1,66 @@
 {
   "project": "adaptive_learning_system",
   "version": "1.0",
-  "description": "Adaptive lesson plan for Python basics",
+  "description": "Adaptive lesson plan for Python basics - Variables, Input, Output",
   "goals": [
     {
-      "id": "L01",
-      "title": "Basic Program Structure",
-      "description": "Write a simple interactive Python program with input, variables, and write in.",
-      "status": "completed",
-      "progress_percent": 100,
+      "id": "G01",
+      "title": "Variables, Input, and Output",
+      "description": "Write a simple program that uses variables, takes user input, and prints output.",
+      "status": "in_progress",
+      "progress_percent": 0,
       "commands": {
-        "input": true,
-        "print": true,
-        "except": true
+        "variables": false,
+        "input": false,
+        "print": false
       },
-      "lessons_completed": ["L01", "L02"],
-      "test_passed": true,
-      "date_completed": "2025-11-26"
+      "lessons_completed": [],
+      "test_passed": false
     }
   ],
-  
+  "lessons": [
+    {
+      "id": "L01",
+      "title": "Variables and Data Types",
+      "goal_id": "G01",
+      "status": "not_started",
+      "new_commands": ["variables"],
+      "description": "Learn how to create and use variables with different data types (int, str, float)",
+      "output": "program_v1.py"
+    },
+    {
+      "id": "L02",
+      "title": "Taking User Input",
+      "goal_id": "G01",
+      "status": "not_started",
+      "new_commands": ["input"],
+      "description": "Learn how to get data from users using the input() function",
+      "output": "program_v2.py"
+    },
+    {
+      "id": "L03",
+      "title": "Printing Output",
+      "goal_id": "G01",
+      "status": "not_started",
+      "new_commands": ["print"],
+      "description": "Learn how to display information to users using print()",
+      "output": "program_v3.py"
+    },
+    {
+      "id": "W01",
+      "title": "Review: Combining Variables, Input, and Output",
+      "goal_id": "G01",
+      "type": "review",
+      "status": "not_started",
+      "description": "Practice using all three concepts together in one program"
+    },
+    {
+      "id": "T01",
+      "title": "Test: Build a Simple Greeting Program",
+      "goal_id": "G01",
+      "type": "test",
+      "status": "not_started",
+      "description": "Create a program that takes user input and prints a personalized greeting"
+    }
+  ]
+}
