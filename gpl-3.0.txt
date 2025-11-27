@@ -1,5 +1,5 @@
 Adaptive Learning System – Universal Template
-Copyright (C) 2025  Tobias Bertuleit
+Copyright (C) 2025  Tobias Bertuleit www.github.com/Tobzu
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
