@@ -1,0 +1,8 @@
+# L01 - Basics
+fruit = "" # Letter/String
+amount = "" # number/Integer (whole number) / float (decimal number)
+question = True # Boolean rule / True or False
+
+fruit = input("What fruit do you want?")
+amount = ("Who many of them?") #ATTANION - when not ... input is String
+print("We do not have", amount, fruit")
