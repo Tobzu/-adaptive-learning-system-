@@ -1,0 +1,66 @@
+{
+  "project": "adaptive_learning_system",
+  "subject": "Esperanto",
+  "version": "1.0",
+  "sessions": [
+    {
+      "session_id": "E-S001",
+      "date": "2025-11-27",
+      "start_time": "18:00",
+      "end_time": "18:45",
+      "duration_minutes": 45,
+      "lesson_type": "L",
+      "lesson_id": "L01",
+      "goal_id": "G01",
+      "session_goals": {
+        "main_goal": "Learn personal pronouns and basic greetings",
+        "learning_goal": "Use 'mi', 'vi', 'li', 'ŝi', 'ĝi', 'ni', 'vi', 'ili' in simple sentences",
+        "time_planned_minutes": 45
+      },
+      "concepts_learned": [
+        {
+          "concept": "personal_pronouns",
+          "status": "understood",
+          "notes": "Can use all pronouns in simple present tense sentences"
+        }
+      ],
+      "errors": [
+        {
+          "error_type": "Morphology",
+          "line": 3,
+          "description": "Wrong pronoun form: 'ŝo' instead of 'ŝi'",
+          "self_corrected": true,
+          "attempts": 1
+        },
+        {
+          "error_type": "Structure",
+          "line": 6,
+          "description": "Word order awkward: verb placed before subject without context",
+          "self_corrected": false,
+          "attempts": 2
+        }
+      ],
+      "reflection": {
+        "difficulty": "Remembering all pronoun forms, especially 'ŝi' and 'ĝi'",
+        "success": "I can now write 5 correct sentences with different pronouns",
+        "strategy": "Repeated the pronoun list out loud and wrote each in one sentence",
+        "transfer": "Will use these pronouns in the next lesson with verbs in -as",
+        "next_focus": "Combine pronouns with present tense verbs"
+      },
+      "goal_achieved": false,
+      "error_count": 2,
+      "error_free_attempts": 1,
+      "celebration_level": 0,
+      "notes": "Good start, small morphology mistakes but quick self-correction"
+    }
+  ],
+  "summary": {
+    "total_sessions": 1,
+    "total_duration_minutes": 45,
+    "total_concepts_learned": 1,
+    "total_errors": 2,
+    "average_errors_per_session": 2,
+    "self_correction_rate": 0.5,
+    "goal_achievement_rate": 0.0
+  }
+}

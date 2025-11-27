@@ -1,0 +1,53 @@
+{
+  "project": "adaptive_learning_system",
+  "subject": "Esperanto Language Learning",
+  "language": "Esperanto",
+  "version": "1.0",
+  "description": "Adaptive lesson system for learning Esperanto with error-driven learning, goal-based structure, and strict source management",
+  
+  "external_sources": [
+    {
+      "file": "sources/grammar.txt",
+      "description": "Official Esperanto grammar reference - includes verb conjugations, cases, and syntax rules",
+      "type": "grammar_reference"
+    },
+    {
+      "file": "sources/dictionary.txt",
+      "description": "Esperanto-German/English word list with translations and basic word forms",
+      "type": "vocabulary_reference"
+    }
+  ],
+
+  "system_rules": {
+    "study_mode": "error_driven_learning",
+    "two_concept_rule": "Maximum 2 new concepts per learning lesson",
+    "lesson_types": ["L (Learning)", "W (Review/Workshop)", "T (Test)"],
+    "error_levels": [0, 1, 2],
+    "error_level_trigger": "Same error appears 3+ times → automatic review lesson (W##)"
+  },
+
+  "feedback_format": {
+    "error_identification": "Line number + error type only (no immediate solution)",
+    "learner_correction": "Learner corrects based on hints",
+    "full_explanation": "Only after error-free submission or explicit request"
+  },
+
+  "session_structure": {
+    "duration_planned_minutes": 60,
+    "break_every_minutes": 25,
+    "reflection_after_session": true
+  },
+
+  "error_types_esperanto": {
+    "Morphology": "Wrong word form, incorrect conjugation (aas, is endings), missing -n accusative",
+    "Structure": "Word order errors, incorrect case usage, missing required particles",
+    "Semantic": "Grammatically correct but semantically wrong, wrong nuance or meaning",
+    "Vocabulary": "Unknown words, using word forms not yet taught"
+  },
+
+  "celebration_system": {
+    "level_0": "Error fixed immediately",
+    "level_1": "Goal section completed",
+    "level_2": "Full goal mastered with test passed"
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "timestamp": "2025-11-27T18:05:00",
+    "error_type": "Morphology",
+    "line": 3,
+    "level": 0,
+    "description": "Wrong pronoun spelling: 'ŝo' instead of 'ŝi'",
+    "lesson": "L01",
+    "goal_id": "G01",
+    "resolved": true
+  },
+  {
+    "timestamp": "2025-11-27T18:15:00",
+    "error_type": "Structure",
+    "line": 6,
+    "level": 1,
+    "description": "Unnatural word order: verb before subject without emphasis",
+    "lesson": "L01",
+    "goal_id": "G01",
+    "resolved": false
+  }
+]

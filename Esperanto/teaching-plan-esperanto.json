@@ -1,0 +1,187 @@
+{
+  "project": "adaptive_learning_system",
+  "subject": "Esperanto",
+  "version": "1.0",
+  "description": "Three-goal curriculum for beginner Esperanto learners",
+
+  "goals": [
+    {
+      "id": "G01",
+      "title": "Introduce Yourself and Daily Routine",
+      "description": "Learn to greet, introduce yourself, and describe daily activities in simple present tense",
+      "status": "not_started",
+      "progress_percent": 0,
+      "commands": {
+        "personal_pronouns": false,
+        "present_tense_as": false,
+        "basic_verbs": false,
+        "word_order": false
+      },
+      "lessons_completed": [],
+      "test_passed": false
+    },
+    {
+      "id": "G02",
+      "title": "Accusative Case and Direct Objects",
+      "description": "Master the -n ending for direct objects and construct more complex sentences",
+      "status": "not_started",
+      "progress_percent": 0,
+      "commands": {
+        "accusative_n": false,
+        "object_verbs": false,
+        "sentence_expansion": false
+      },
+      "lessons_completed": [],
+      "test_passed": false
+    },
+    {
+      "id": "G03",
+      "title": "Asking Questions and Giving Directions",
+      "description": "Use question words (kiu, kio, kie, kiam), prepositions, and imperative forms",
+      "status": "not_started",
+      "progress_percent": 0,
+      "commands": {
+        "question_words": false,
+        "prepositions": false,
+        "imperative_form": false
+      },
+      "lessons_completed": [],
+      "test_passed": false
+    }
+  ],
+
+  "lessons": [
+    {
+      "id": "L01",
+      "goal_id": "G01",
+      "title": "Personal Pronouns and Greetings",
+      "type": "learning",
+      "status": "not_started",
+      "new_commands": ["personal_pronouns"],
+      "source_references": ["grammar.txt: Personal Pronouns section", "dictionary.txt: greeting words"],
+      "description": "Learn mi, vi, li, ŝi, ĝi, ni, vi (plural), ili and basic greetings",
+      "expected_duration_minutes": 45
+    },
+    {
+      "id": "L02",
+      "goal_id": "G01",
+      "title": "Present Tense Verbs (-as ending)",
+      "type": "learning",
+      "status": "not_started",
+      "new_commands": ["present_tense_as"],
+      "source_references": ["grammar.txt: Verb conjugation - present tense section"],
+      "description": "Learn infinitive → -as present form (labori → laboras)",
+      "expected_duration_minutes": 45
+    },
+    {
+      "id": "L03",
+      "goal_id": "G01",
+      "title": "Common Daily Verbs",
+      "type": "learning",
+      "status": "not_started",
+      "new_commands": ["basic_verbs"],
+      "source_references": ["dictionary.txt: common verbs list"],
+      "description": "Learn: labori (work), studi (study), manĝi (eat), dormi (sleep), lerni (learn)",
+      "expected_duration_minutes": 45
+    },
+    {
+      "id": "W01",
+      "goal_id": "G01",
+      "title": "Review: Combining Pronouns, Verbs, and Sentences",
+      "type": "review",
+      "status": "not_started",
+      "source_references": ["grammar.txt: Word order section"],
+      "description": "Practice: Mi laboras. Vi studas. Li dormas. (No new concepts, combine known elements)",
+      "expected_duration_minutes": 45
+    },
+    {
+      "id": "T01",
+      "goal_id": "G01",
+      "title": "Test: Describe Your Daily Routine",
+      "type": "test",
+      "status": "not_started",
+      "description": "Write 5 sentences introducing yourself and describing three daily activities",
+      "passing_criteria": "All sentences grammatically correct, all required verbs conjugated properly"
+    },
+    {
+      "id": "L04",
+      "goal_id": "G02",
+      "title": "Accusative Case (-n ending)",
+      "type": "learning",
+      "status": "not_started",
+      "new_commands": ["accusative_n"],
+      "source_references": ["grammar.txt: Accusative case section", "dictionary.txt: noun examples"],
+      "description": "Learn -n suffix for direct objects: Mi manĝas pomon (I eat an apple)",
+      "expected_duration_minutes": 45
+    },
+    {
+      "id": "L05",
+      "goal_id": "G02",
+      "title": "Object-Taking Verbs",
+      "type": "learning",
+      "status": "not_started",
+      "new_commands": ["object_verbs"],
+      "source_references": ["dictionary.txt: transitive verbs"],
+      "description": "Learn: vidi (see), manĝi (eat), lerni (learn), skribi (write) with accusative objects",
+      "expected_duration_minutes": 45
+    },
+    {
+      "id": "W02",
+      "goal_id": "G02",
+      "title": "Review: Sentences with Direct Objects",
+      "type": "review",
+      "status": "not_started",
+      "description": "Practice: Mi vidas hundon. Vi manĝas pomon. Ŝi skribas leteron.",
+      "expected_duration_minutes": 45
+    },
+    {
+      "id": "T02",
+      "goal_id": "G02",
+      "title": "Test: Build Complex Sentences",
+      "type": "test",
+      "status": "not_started",
+      "description": "Write 5 sentences using pronouns, present tense verbs, and accusative objects",
+      "passing_criteria": "All -n endings used correctly on direct objects"
+    },
+    {
+      "id": "L06",
+      "goal_id": "G03",
+      "title": "Question Words (Kiu, Kio, Kie, Kiam)",
+      "type": "learning",
+      "status": "not_started",
+      "new_commands": ["question_words"],
+      "source_references": ["grammar.txt: Question words section"],
+      "description": "Learn: kiu (who), kio (what), kie (where), kiam (when) and question formation",
+      "expected_duration_minutes": 45
+    },
+    {
+      "id": "L07",
+      "goal_id": "G03",
+      "title": "Prepositions and Location",
+      "type": "learning",
+      "status": "not_started",
+      "new_commands": ["prepositions"],
+      "source_references": ["grammar.txt: Prepositions section"],
+      "description": "Learn: en (in), sur (on), ĉe (at), antaŭ (before), post (after)",
+      "expected_duration_minutes": 45
+    },
+    {
+      "id": "W03",
+      "goal_id": "G03",
+      "title": "Review: Questions and Directions",
+      "type": "review",
+      "status": "not_started",
+      "description": "Practice: Kie estas la stacidomo? Kio estas en la borso? Kie laboras vi?",
+      "expected_duration_minutes": 45
+    },
+    {
+      "id": "T03",
+      "goal_id": "G03",
+      "title": "Test: Ask and Answer Questions",
+      "type": "test",
+      "status": "not_started",
+      "description": "Write 5 questions about locations and daily activities, then answer them",
+      "passing_criteria": "All question words used correctly, prepositions placed properly"
+    }
+  ]
+}

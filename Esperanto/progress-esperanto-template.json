@@ -1,0 +1,84 @@
+{
+  "project": "adaptive_learning_system",
+  "subject": "Esperanto",
+  "version": "1.0",
+  "last_update": "2025-11-27",
+  "goals": [
+    {
+      "id": "G01",
+      "title": "Introduce Yourself and Daily Routine",
+      "status": "in_progress",
+      "progress_percent": 20,
+      "commands": {
+        "personal_pronouns": true,
+        "present_tense_as": false,
+        "basic_verbs": false,
+        "word_order": false
+      },
+      "lessons": {
+        "L01": {
+          "status": "completed",
+          "error_count": 2,
+          "last_session_id": "E-S001"
+        },
+        "L02": {
+          "status": "not_started"
+        },
+        "L03": {
+          "status": "not_started"
+        },
+        "W01": {
+          "status": "locked"
+        },
+        "T01": {
+          "status": "locked"
+        }
+      },
+      "test_passed": false
+    },
+    {
+      "id": "G02",
+      "title": "Accusative Case and Direct Objects",
+      "status": "locked",
+      "progress_percent": 0,
+      "commands": {
+        "accusative_n": false,
+        "object_verbs": false,
+        "sentence_expansion": false
+      },
+      "lessons": {},
+      "test_passed": false
+    },
+    {
+      "id": "G03",
+      "title": "Asking Questions and Giving Directions",
+      "status": "locked",
+      "progress_percent": 0,
+      "commands": {
+        "question_words": false,
+        "prepositions": false,
+        "imperative_form": false
+      },
+      "lessons": {},
+      "test_passed": false
+    }
+  ],
+  "stats": {
+    "total_lessons_started": 1,
+    "total_lessons_completed": 1,
+    "total_tests_passed": 0,
+    "total_errors": 2,
+    "repeated_error_types": {
+      "Morphology": 1,
+      "Structure": 1,
+      "Semantic": 0,
+      "Vocabulary": 0
+    },
+    "review_triggers": 0
+  },
+  "recommendations": [
+    "Repeat short drills with personal pronouns before starting L02.",
+    "In L02, focus on combining pronouns with -as verb forms.",
+    "Delay G02 (accusative) until G01 commands are all mastered."
+  ]
+}
